@@ -179,7 +179,7 @@ if ((father==1)&&(mother==1)){
     cout<<"-------------------------------------------\n";
     cout<<"|    Xc     |     XXc      |      XcXc    |\n";
     cout<<"-------------------------------------------\n";
-    cout<<"|     Y     |      XY      |      XcY     |\n";
+    cout<<"|     Y     |     XcY      |      XcY     |\n";
     cout<<"-------------------------------------------\n";
     cout<<"\nProbabilities:\n";
     cout<<"Female, not colorblind: 0\n";
