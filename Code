@@ -1,0 +1,194 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+//intro declaration
+void intro();
+
+//ask color declaration
+void askColor(int& father, int& mother);
+
+//error declaration
+void error ();
+
+//punnett declaration
+void punnett (int& father, int& mother);
+
+//main code
+    int main()
+    {
+        char answer;
+        
+        do{ 
+            int father=0;
+            int mother=0;
+            
+            intro();
+            askColor(father, mother);
+            punnett (father, mother);
+            
+            //run again?
+            cout<<"\nRun again (y/n)?: ";
+            cin>>answer;
+        
+        }while (answer=='y'||answer=='Y');
+        
+        return 0;
+    }
+
+
+//intro definition
+void intro(){
+    cout<<"-------------------------------------------\n";
+    cout<<"|         CALCULATE COLORBLINDNESS        |\n";
+    cout<<"-------------------------------------------\n\n";
+}
+
+//father and mother definition
+void askColor(int& father, int& mother){
+    //father
+    do{
+        cout<<"Does the father have...\n";
+        cout<<"1) Normal vision\n";
+        cout<<"2) Is colorblind\n";
+        cout<<"Answer: ";
+        
+        while (!(cin>>father)) {
+            error();
+            cout<<"Does the father have...\n";
+            cout<<"1) Normal vision\n";
+            cout<<"2) Is colorblind\n";
+            cout<<"Answer: ";
+        }
+            
+        if (father<1||father>2) {
+        cout<< "Error. Please try again.\n\n";
+        }
+    }while (father<1||father>2);
+
+    //mother
+    cout<<"\n";
+    do{
+        cout<<"Does the mother have...\n";
+        cout<<"1) Normal vision\n";
+        cout<<"2) Is colorblind\n";
+        cout<<"3) Is a carrier\n";
+        cout<<"Answer: ";
+        
+        while (!(cin>>mother)) {
+            error();
+            cout<<"Does the mother have...\n";
+            cout<<"1) Normal vision\n";
+            cout<<"2) Is colorblind\n";
+            cout<<"3) Is a carrier\n";
+            cout<<"Answer: ";
+        }
+        
+        if (mother<1||mother>3) {
+        cout<< "Error. Please try again.\n\n";
+        }
+    }while (mother<1||mother>3);
+}
+
+//error definition
+void error(){
+if (cin.fail()) {
+        cin.clear();                
+        cin.ignore(1000, '\n');     
+        cout << "Error. Please try again.\n\n";
+    }
+}
+
+//punnett definition
+void punnett(int& father, int& mother) {
+    cout<<"\nNOTE: XX is FEMALE, XY is MALE, C is COLORBLINDNESS.\n";
+    cout<<"\nPunnett square:\n";
+if ((father==1)&&(mother==1)){  
+    cout<<"-------------------------------------------\n";
+    cout<<"|           |      X       |       X      |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"|     X     |      XX      |       XX     |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"|     Y     |      XY      |       XY     |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"\nProbabilities:\n";
+    cout<<"Female, not colorblind: 50\n";
+    cout<<"Female, colorblind: 0\n";
+    cout<<"Female, carrier: 0\n";
+    cout<<"Male, not colorblind: 50\n";
+    cout<<"Male, colorblind: 0\n";
+}else if ((father==1)&&(mother==3)){
+    cout<<"-------------------------------------------\n";
+    cout<<"|           |      X       |      Xc      |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"|     X     |      XX      |      XXc     |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"|     Y     |      XY      |      XcY     |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"\nProbabilities:\n";
+    cout<<"Female, not colorblind: 25\n";
+    cout<<"Female, colorblind: 0\n";
+    cout<<"Female, carrier: 25\n";
+    cout<<"Male, not colorblind: 25\n";
+    cout<<"Male, colorblind: 25\n";
+}else if ((father==1)&&(mother==2)){
+    cout<<"-------------------------------------------\n";
+    cout<<"|           |     Xc       |      Xc      |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"|     X     |     XXc      |      XXc     |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"|     Y     |     XcY      |      XcY     |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"\nProbabilities:\n";
+    cout<<"Female, not colorblind: 0\n";
+    cout<<"Female, colorblind: 0\n";
+    cout<<"Female, carrier: 50\n";
+    cout<<"Male, not colorblind: 0\n";
+    cout<<"Male, colorblind: 50\n";
+}else if ((father==2)&&(mother==1)){
+    cout<<"-------------------------------------------\n";
+    cout<<"|           |      X       |       X      |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"|    Xc     |     XXc      |      XXc     |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"|     Y     |      XY      |       XY     |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"\nProbabilities:\n";
+    cout<<"Female, not colorblind: 0\n";
+    cout<<"Female, colorblind: 0\n";
+    cout<<"Female, carrier: 50\n";
+    cout<<"Male, not colorblind: 50\n";
+    cout<<"Male, colorblind: 0\n";
+}else if ((father==2)&&(mother==3)){
+    cout<<"-------------------------------------------\n";
+    cout<<"|           |      X       |      Xc      |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"|    Xc     |     XXc      |      XcXc    |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"|     Y     |      XY      |      XcY     |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"\nProbabilities:\n";
+    cout<<"Female, not colorblind: 0\n";
+    cout<<"Female, colorblind: 25\n";
+    cout<<"Female, carrier: 25\n";
+    cout<<"Male, not colorblind: 25\n";
+    cout<<"Male, colorblind: 25\n";
+}else if ((father==2)&&(mother==2)){   
+    cout<<"-------------------------------------------\n";
+    cout<<"|           |     Xc       |      Xc      |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"|    Xc     |     XXc      |      XcXc    |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"|     Y     |      XY      |      XcY     |\n";
+    cout<<"-------------------------------------------\n";
+    cout<<"\nProbabilities:\n";
+    cout<<"Female, not colorblind: 0\n";
+    cout<<"Female, colorblind: 50\n";
+    cout<<"Female, carrier: 0\n";
+    cout<<"Male, not colorblind: 0\n";
+    cout<<"Male, colorblind: 50\n";
+}else{
+    cout<<"Error. Please try again";
+    return;
+}
+}
