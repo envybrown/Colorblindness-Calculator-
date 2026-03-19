@@ -28,7 +28,7 @@ void punnett (int& father, int& mother);
             punnett (father, mother);
             
             //run again?
-            cout<<"\nRun again (y/n)?: ";
+            cout<<"\nRun again (Y/N)?: ";
             cin>>answer;
         
         }while (answer=='y'||answer=='Y');
