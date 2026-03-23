@@ -112,11 +112,11 @@ if ((father==1)&&(mother==1)){
     cout<<"|     Y     |      XY      |       XY     |\n";
     cout<<"-------------------------------------------\n";
     cout<<"\nProbabilities:\n";
-    cout<<"Female, not colorblind: 50\n";
-    cout<<"Female, colorblind: 0\n";
-    cout<<"Female, carrier: 0\n";
-    cout<<"Male, not colorblind: 50\n";
-    cout<<"Male, colorblind: 0\n";
+    cout<<"Female, not colorblind: 50%\n";
+    cout<<"Female, colorblind: 0%\n";
+    cout<<"Female, carrier: 0%\n";
+    cout<<"Male, not colorblind: 50%\n";
+    cout<<"Male, colorblind: 0%\n";
 }else if ((father==1)&&(mother==3)){
     cout<<"-------------------------------------------\n";
     cout<<"|           |      X       |      Xc      |\n";
@@ -126,11 +126,11 @@ if ((father==1)&&(mother==1)){
     cout<<"|     Y     |      XY      |      XcY     |\n";
     cout<<"-------------------------------------------\n";
     cout<<"\nProbabilities:\n";
-    cout<<"Female, not colorblind: 25\n";
-    cout<<"Female, colorblind: 0\n";
-    cout<<"Female, carrier: 25\n";
-    cout<<"Male, not colorblind: 25\n";
-    cout<<"Male, colorblind: 25\n";
+    cout<<"Female, not colorblind: 25%\n";
+    cout<<"Female, colorblind: 0%\n";
+    cout<<"Female, carrier: 25%\n";
+    cout<<"Male, not colorblind: 25%\n";
+    cout<<"Male, colorblind: 25%\n";
 }else if ((father==1)&&(mother==2)){
     cout<<"-------------------------------------------\n";
     cout<<"|           |     Xc       |      Xc      |\n";
@@ -140,11 +140,11 @@ if ((father==1)&&(mother==1)){
     cout<<"|     Y     |     XcY      |      XcY     |\n";
     cout<<"-------------------------------------------\n";
     cout<<"\nProbabilities:\n";
-    cout<<"Female, not colorblind: 0\n";
-    cout<<"Female, colorblind: 0\n";
-    cout<<"Female, carrier: 50\n";
-    cout<<"Male, not colorblind: 0\n";
-    cout<<"Male, colorblind: 50\n";
+    cout<<"Female, not colorblind: 0%\n";
+    cout<<"Female, colorblind: 0%\n";
+    cout<<"Female, carrier: 50%\n";
+    cout<<"Male, not colorblind: 0%\n";
+    cout<<"Male, colorblind: 50%\n";
 }else if ((father==2)&&(mother==1)){
     cout<<"-------------------------------------------\n";
     cout<<"|           |      X       |       X      |\n";
@@ -154,11 +154,11 @@ if ((father==1)&&(mother==1)){
     cout<<"|     Y     |      XY      |       XY     |\n";
     cout<<"-------------------------------------------\n";
     cout<<"\nProbabilities:\n";
-    cout<<"Female, not colorblind: 0\n";
-    cout<<"Female, colorblind: 0\n";
-    cout<<"Female, carrier: 50\n";
-    cout<<"Male, not colorblind: 50\n";
-    cout<<"Male, colorblind: 0\n";
+    cout<<"Female, not colorblind: 0%\n";
+    cout<<"Female, colorblind: 0%\n";
+    cout<<"Female, carrier: 50%\n";
+    cout<<"Male, not colorblind: 50%\n";
+    cout<<"Male, colorblind: 0%\n";
 }else if ((father==2)&&(mother==3)){
     cout<<"-------------------------------------------\n";
     cout<<"|           |      X       |      Xc      |\n";
@@ -168,11 +168,11 @@ if ((father==1)&&(mother==1)){
     cout<<"|     Y     |      XY      |      XcY     |\n";
     cout<<"-------------------------------------------\n";
     cout<<"\nProbabilities:\n";
-    cout<<"Female, not colorblind: 0\n";
-    cout<<"Female, colorblind: 25\n";
-    cout<<"Female, carrier: 25\n";
-    cout<<"Male, not colorblind: 25\n";
-    cout<<"Male, colorblind: 25\n";
+    cout<<"Female, not colorblind: 0%\n";
+    cout<<"Female, colorblind: 25%\n";
+    cout<<"Female, carrier: 25%\n";
+    cout<<"Male, not colorblind: 25%\n";
+    cout<<"Male, colorblind: 25%\n";
 }else if ((father==2)&&(mother==2)){   
     cout<<"-------------------------------------------\n";
     cout<<"|           |     Xc       |      Xc      |\n";
@@ -182,11 +182,11 @@ if ((father==1)&&(mother==1)){
     cout<<"|     Y     |     XcY      |      XcY     |\n";
     cout<<"-------------------------------------------\n";
     cout<<"\nProbabilities:\n";
-    cout<<"Female, not colorblind: 0\n";
-    cout<<"Female, colorblind: 50\n";
-    cout<<"Female, carrier: 0\n";
-    cout<<"Male, not colorblind: 0\n";
-    cout<<"Male, colorblind: 50\n";
+    cout<<"Female, not colorblind: 0%\n";
+    cout<<"Female, colorblind: 50%\n";
+    cout<<"Female, carrier: 0%\n";
+    cout<<"Male, not colorblind: 0%\n";
+    cout<<"Male, colorblind: 50%\n";
 }else{
     cout<<"Error. Please try again";
     return;
